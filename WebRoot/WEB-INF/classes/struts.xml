@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<!-- 定义一个名称为bysj的包，继承struts 2的默认包，指定命名空间为"/" -->
+	<package name="default" namespace="/" extends="struts-default">
+	</package>
+	
+	<!-- 用户登录功能 -->
+	<package name="users" namespace="/users" extends="default">
+	    <!-- 配置拦截器AuthorityInterceptor -->
+	    <interceptors>
+	    	<interceptor name="loginCheck" class="com.wh.interceptor.AuthorityInterceptor" />
+	    </interceptors>
+	    
+	    <!-- 设置全局的返回值,返回首页 -->         
+	    <global-results>             
+	    	<result name="login" type="redirectAction">Users_Login</result>         
+	    </global-results>
+	    
+	<!-- 用户登录功能 -->
+	<action name = "Users_Login" class="com.wh.action.UsersAction" method="Login">
+	      <result name = "login_success">login_success.jsp</result>
+	      <result name = "input">users_login.jsp</result>
+	</action>
+	
+	<!-- 用户注销功能 -->
+	<action name = "Users_Logout" class="com.wh.action.UsersAction" method="Logout">
+	      <result name = "logout_success">users_login.jsp</result>
+	      <interceptor-ref name="loginCheck" />	
+          <interceptor-ref name="defaultStack" />	
+	</action>
+	
+	<!-- 修改用户信息功能 -->
+	<action name = "Users_ChangeInfo" class="com.wh.action.UsersAction" method="ChangeInfo">
+	       <result name = "modifyinfo_success">modifyinfo_success.jsp</result>
+	       <interceptor-ref name="loginCheck" />	
+           <interceptor-ref name="defaultStack" />	
+	</action>
+	
+	<!-- 用户注册功能 -->
+	<action name="Users_Register" class="com.wh.action.RegisterAction" method="Register">
+	       <result name ="register_success">register_success.jsp</result>
+	       <result name ="register_failure">users_register.jsp</result>
+	</action>
+	</package>
+	
+	<package name="goods" namespace="/goods" extends="default">
+	    <!-- 配置拦截器AuthorityInterceptor -->
+	    <interceptors>
+	    	<interceptor name="loginCheck" class="com.wh.interceptor.AuthorityInterceptor" />
+	    </interceptors>
+	
+	<action name="Goods_Info" class = "com.wh.action.GoodsAction" method ="ShowGoodsType">
+	       <result name= "ShowGoodsType">goods_info.jsp</result>
+	       <result name= "error" >error.jsp</result>
+	</action>
+	
+	</package>
+</struts>    

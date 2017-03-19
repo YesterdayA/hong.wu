@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.wh.entity.Goods" table="goods" catalog="bysj">
+        <id name="goodsId" type="java.lang.Integer">
+            <column name="goodsId" />
+            <generator class="native"></generator>
+        </id>
+        <property name="goodsName" type="java.lang.String">
+            <column name="goodsName" length="50" />
+        </property>
+        <many-to-one name="goodsType" class="com.wh.entity.GoodsType" fetch="select" lazy="false">
+            <column name="goodsTypeId" />
+        </many-to-one>
+        <!-- <property name="goodsTypeId" type="java.lang.Integer">
+            <column name="goodsTypeId" length="4" /> 
+            </property>
+          -->
+        <property name="goodsBrief" type="java.lang.String">
+            <column name="goodsBrief" length="400" />
+        </property>
+        <property name="goodsPrice" type="java.lang.Integer">
+            <column name="goodsPrice" length="8" />
+        </property>
+        <property name="goodsImageName" type="java.lang.String">
+            <column name="goodsImageName" length="50" />
+        </property>
+        <property name="sellCount" type="java.lang.Integer">
+            <column name="sellCount" length="4" />
+        </property>
+        <property name="goodsDate" type="java.lang.String">
+            <column name="goodsDate" length="10" />
+        </property>
+        <property name="storedCount" type="java.lang.Integer">
+            <column name="storedCount" length="4" />
+        </property>
+    </class>
+</hibernate-mapping>

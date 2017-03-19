@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.wh.entity.Admin" table="admin" catalog="bysj">
+        <id name="aid" type="java.lang.Integer">
+            <column name="aid" />
+            <generator class="native"></generator>
+        </id>
+        <property name="admin" type="java.lang.String">
+            <column name="admin" length="20" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="password" length="20" />
+        </property>
+         <property name="gender" type="java.lang.String">
+            <column name="gender" length="2" />
+        </property>
+    </class>
+</hibernate-mapping>

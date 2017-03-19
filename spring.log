@@ -1,0 +1,19 @@
+14:37:25,814 INFO  [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+14:37:25,822 INFO  [org.hibernate.Version] HHH000412: Hibernate Core {4.1.4.Final}
+14:37:25,823 INFO  [org.hibernate.cfg.Environment] HHH000206: hibernate.properties not found
+14:37:25,824 INFO  [org.hibernate.cfg.Environment] HHH000021: Bytecode provider name : javassist
+14:37:25,843 INFO  [org.hibernate.cfg.Configuration] HHH000043: Configuring from resource: /hibernate.cfg.xml
+14:37:25,843 INFO  [org.hibernate.cfg.Configuration] HHH000040: Configuration resource: /hibernate.cfg.xml
+14:37:25,898 INFO  [org.hibernate.cfg.Configuration] HHH000221: Reading mappings from resource: com/wh/entity/Admin.hbm.xml
+14:37:25,934 INFO  [org.hibernate.cfg.Configuration] HHH000221: Reading mappings from resource: com/wh/entity/Users.hbm.xml
+14:37:25,947 INFO  [org.hibernate.cfg.Configuration] HHH000221: Reading mappings from resource: com/wh/entity/Goods.hbm.xml
+14:37:25,957 INFO  [org.hibernate.cfg.Configuration] HHH000221: Reading mappings from resource: com/wh/entity/GoodsType.hbm.xml
+14:37:25,964 INFO  [org.hibernate.cfg.Configuration] HHH000041: Configured SessionFactory: null
+14:37:26,047 INFO  [org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl] HHH000402: Using Hibernate built-in connection pool (not for production use!)
+14:37:26,052 INFO  [org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl] HHH000115: Hibernate connection pool size: 20
+14:37:26,052 INFO  [org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl] HHH000006: Autocommit mode: false
+14:37:26,052 INFO  [org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl] HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bysj?useUnicode=true&characterEncoding=UTF-8]
+14:37:26,052 INFO  [org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl] HHH000046: Connection properties: {user=root, password=****, characterEncoding=utf-8}
+14:37:26,279 INFO  [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+14:37:26,289 INFO  [org.hibernate.engine.transaction.internal.TransactionFactoryInitiator] HHH000399: Using default transaction strategy (direct JDBC transactions)
+14:37:26,299 INFO  [org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory] HHH000397: Using ASTQueryTranslatorFactory
